@@ -1,0 +1,8 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    user_agent:
+        label: 'bombozama.linkcheck::lang.menu.useragent.label'
+        searchable: true

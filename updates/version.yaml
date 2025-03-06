@@ -8,3 +8,23 @@
 1.0.5:
     - 'Updated table bombozama_linkcheck_broken_links'
     - update_broken_links_table.php
+2.0.0:
+    - 'Refactored Plugin; compatibility with October 3.x'
+    - update_broken_links_table2.php
+    - create_context_table.php
+2.1.0:
+    - 'Added user agent feature'
+    - create_user_agents_table.php
+2.1.1:
+    - 'Changed field last_checked from datetime to string'
+    - update_context_table.php
+2.2.0:
+    - 'New Feature: Report widget for dashboard'
+2.2.1:
+    - 'Optimized data display on widget'
+2.3.0:
+    - 'Added config.yaml to include plugins and/or directories for link check'
+2.3.1:
+    - 'Changed field last_checked from string to datetime'
+2.4.0:
+    - Config for CMS directories and plugins was integrated in backend form.

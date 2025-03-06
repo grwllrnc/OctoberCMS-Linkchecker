@@ -1,20 +1,22 @@
 <?php
+
 return [
     'plugin' => [
         'tab'      => 'LinkCheck Plugin',
         'manage'   => 'Manage Link check configuration',
         'view'     => 'Grant access to the link report',
-        'category' => 'Link Check'
+        'useragent' => 'Manage user agent configuration',
+        'category' => 'Link Check',
     ],
     'details'     => [
         'name'           => 'Link Check',
-        'description'    => 'Checks database daily for broken links...'
+        'description'    => 'Checks database daily for broken links...',
     ],
     'strings'     => [
         'refresh_list'      => 'Refresh Link List',
         'list_title'        => 'Broken Link List',
         'no_records'        => 'No broken links have been detected at this time or the system is currently checking for broken links.',
-        'total_links'       => 'A total of :number broken links were found!',
+        'total_links'       => ':total links were checked. A total of :number broken links were found!',
         'working'           => 'Working... please hold',
         'status'            => 'Status',
         'url'               => 'URL',
@@ -24,17 +26,53 @@ return [
         'field'             => 'Field',
         'created_at'        => 'Last check',
         'time'              => 'Time mask',
-        'time_comment'      => 'The plugin will check for broken links as scheduled here. Check http://crontab.org/ for more info.',
+        'time_comment'      => 'The plugin will check for broken links as scheduled here. To suspend the cron job, leave this field empty. Check http://crontab.org/ for more info.',
         'codes'             => 'Which HTTP response codes should be reported?',
         'codes_opt_200'     => 'Successful responses (200 - 206) [not recomended]',
         'codes_opt_300'     => 'Redirection responses (300 - 308)',
         'codes_opt_400'     => 'Client error responses (400 - 431)',
         'codes_opt_500'     => 'Server error responses (500 - 511)',
         'check_cms'         => 'Check links within CMS files?',
+        'dirs'              => 'CMS theme directories',
+        'dirs_comment'      => 'Select the directories whose files you wish to scan.',
         'modelators_prompt' => 'Select a database field',
-        'modelator'         => 'Plugin/Model',
-        'modelator_comment' => 'Select the Plugin/Model/Fields that you wish to scan.',
+        'modelator'         => 'Plugin Model Fields',
+        'modelator_comment' => 'Select the model fields that you wish to scan.',
         'modelator_empty'   => 'Select at least one field to check for broken links [optional]',
+        'plugins'           => 'Plugins',
+        'plugins_comment'   => 'Select the Plugins that you wish to scan.',
+        'plugins_empty'     => 'Select at least one plugin to check for broken links [optional]',
+        'CMS_dir_config'    => 'No directories were specified for the link check in config.yaml.',
+        'useragent'         => [
+            'select_useragent'  => 'Select a user agent for the link check.',
+            'label'             => 'User agent',
+            'default_option'    => 'none',
+        ],
+        'log'               => [
+            'check_started' => '[LinkCheck] Link check started.',
+            'summary'       => '[LinkCheck] Checking the links took :seconds seconds. :urls URLs were checked. :reported were reported.',
+        ],
+    ],
+    'reportwidget' => [
+        'button' => [
+            'label' => 'Go to link report',
+        ],
+        'categories' => [
+            'status' => 'Status',
+            'broken_links' => 'Number of broken links',
+            'total' => 'Total',
+        ],
+        'last_check' => 'Last check on',
+        'status_info' => 'For more information on HTTP status codes see: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTTP/Status</a>',
+        'title' => 'Link Check Overview',
+        'validation' => [
+            'required' => [
+                'message' => 'The Name field is required',
+            ],
+            'regex' => [
+                'message' => 'The Name field can contain only Latin letters.',
+            ],
+        ],
     ],
     'menu' => [
         'settings'    => [
@@ -44,7 +82,11 @@ return [
         'brokenlinks' => [
             'label'       => 'Link report',
             'description' => 'Shows list of broken links',
-        ]
+        ],
+        'useragent' => [
+            'label'       => 'User agent',
+            'description' => 'Configure user agents',
+        ],
     ],
     'codes' => [
         '100' => 'Continue',
@@ -123,5 +165,5 @@ return [
         '525' => 'SSL Handshake Failed',
         '526' => 'Invalid SSL Certificate',
         '527' => 'Railgun Error',
-    ]
+    ],
 ];

@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    url_id:
+        disabled: true
+        label: bombozama.linkcheck::lang.strings.url_id
+    plugin:
+        disabled: true
+        label: bombozama.linkcheck::lang.strings.plugin
+        searchable: true
+    model:
+        disabled: true
+        label: bombozama.linkcheck::lang.strings.model
+        searchable: true
+    model_id:
+        disabled: true
+        label: bombozama.linkcheck::lang.strings.model_id
+        searchable: true
+        select: IF(model_id IS NULL, '--', model_id)
+        width: 110px
+    field:
+        disabled: true
+        label: bombozama.linkcheck::lang.strings.field
+        searchable: true
+        width: 110px

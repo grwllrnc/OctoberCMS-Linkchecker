@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: User Agent
+
+# Model Form Field configuration
+form: $/bombozama/linkcheck/models/useragent/fields.yaml
+
+# Model Class name
+modelClass: Bombozama\Linkcheck\Models\UserAgent
+
+# Default redirect location
+defaultRedirect: bombozama/linkcheck/useragent
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bombozama/linkcheck/useragent/update/:id
+    redirectClose: bombozama/linkcheck/useragent
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bombozama/linkcheck/useragent
+    redirectClose: bombozama/linkcheck/useragent
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

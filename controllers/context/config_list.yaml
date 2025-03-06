@@ -1,0 +1,44 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/bombozama/linkcheck/models/context/columns.yaml
+
+# Model Class name
+modelClass: Bombozama\LinkCheck\Models\Context
+
+# List Title
+title: bombozama.linkcheck::lang.strings.list_title
+
+# Link URL for each record
+recordUrl: null
+
+# Message to display if the list is empty
+noRecordsMessage: bombozama.linkcheck::lang.strings.no_records
+
+# Records to display per page
+recordsPerPage: 20
+
+# Displays the list column set up button
+showSetup: false
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Default sorting column
+defaultSort:
+    column: status
+    direction: desc
+
+# Display checkboxes next to each record
+showCheckboxes: false
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

@@ -1,0 +1,7 @@
+<?php if (BackendAuth::userHasAccess('bombozama.linkcheck.manage')): ?>
+    <div data-control="toolbar">
+        <button type="button" data-request="onRefreshLinkList" class="btn btn-primary oc-icon-plus">
+            <?= e(trans('bombozama.linkcheck::lang.strings.refresh_list')) ?>
+        </button>
+    </div>
+<?php endif ?>

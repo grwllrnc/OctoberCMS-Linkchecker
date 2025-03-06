@@ -1,0 +1,39 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+    
+columns:
+    status:
+        label: bombozama.linkcheck::lang.strings.status
+        searchable: true
+        width: 100px
+        relation: brokenLink
+        select: status
+        type: httpstatus
+    url:
+        label: bombozama.linkcheck::lang.strings.url
+        searchable: true
+        relation: brokenLink
+        select: url
+        type: linkage
+        attributes:
+            target: _blank
+    plugin:
+        label: bombozama.linkcheck::lang.strings.plugin
+        searchable: true
+    model:
+        label: bombozama.linkcheck::lang.strings.model
+        searchable: true
+    model_id:
+        label: 'Model ID'
+        searchable: true
+    field:
+        label: bombozama.linkcheck::lang.strings.field
+        searchable: true
+        width: 110px
+    last_checked:
+        label: bombozama.linkcheck::lang.strings.created_at
+        type: datetime
+        useTimezone: true
+        searchable: false
+        width: 145px

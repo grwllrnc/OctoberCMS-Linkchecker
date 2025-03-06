@@ -1,0 +1,8 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    user_agent:
+        label: 'bombozama.linkcheck::lang.menu.useragent.label'
+        type: text

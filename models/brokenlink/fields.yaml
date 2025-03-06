@@ -1,16 +1,16 @@
 # ===================================
-#  List Column Definitions
+#  Form Field Definitions
 # ===================================
 
-columns:
+fields:
     status:
+        disabled: true
         label: bombozama.linkcheck::lang.strings.status
-        searchable: true
         width: 100px
-        type: httpstatus
+        type: number
     url:
+        disabled: true
         label: bombozama.linkcheck::lang.strings.url
-        searchable: true
-        type: linkage
+        type: text
         attributes:
             target: _blank
